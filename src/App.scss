@@ -1,0 +1,48 @@
+html {
+  font-family: sans-serif;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+section {
+  border-bottom: 1px solid white;
+  padding: 1rem;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+}
+
+#front {
+  font-size: 20px;
+  height: 100vh;
+  // background-color: red;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+}
+
+#front-img {
+  width: 50%;
+  height: 50%;
+}
+
+#front-text-buttons {
+  font-size: 20px;
+  text-align: left;
+  /* height: 30%; */
+  #front-buttons {
+    .btn {
+      margin-right: 20px;
+    }
+  }
+}
+
+#about-me {
+  font-size: 100px;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: blue;
+}
