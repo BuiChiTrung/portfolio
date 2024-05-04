@@ -10,6 +10,7 @@ import {
 import Front from "./Front";
 import AboutMe from "./AboutMe";
 import "./App.scss";
+import Projects from "./Projects";
 
 export default function App() {
   return (
@@ -49,6 +50,7 @@ export default function App() {
         </Navbar>
         <Front />
         <AboutMe />
+        <Projects />
       </div>
     </NextUIProvider>
   );

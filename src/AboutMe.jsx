@@ -1,6 +1,5 @@
 import Heading from "./Heading";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
-import aboutMeImage from "./about-me_cleanup.jpg";
 
 export default function AboutMe() {
   return (
@@ -8,7 +7,7 @@ export default function AboutMe() {
       <Heading subTitle="Get To Know More" title="About Me" />
       <div id="about-me-content">
         <div id="about-me-img">
-          <img src={aboutMeImage} alt="Trung Bui" />
+          <img src={"/imgs/about-me.jpg"} alt="Trung Bui" />
         </div>
         <div id="about-me-text">
           <div id="about-me-cards">

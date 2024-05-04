@@ -1,0 +1,45 @@
+import Heading from "./Heading";
+import ProjectCard from "./ProjectCard";
+
+class Project {
+  constructor(name, desc, logoPath, srcCodeLink) {
+    this.name = name;
+    this.desc = desc;
+    this.logoPath = logoPath;
+    this.srcCodeLink = srcCodeLink;
+  }
+}
+
+const myProjects = [
+  new Project(
+    "Kong Custom Plugin",
+    "A custom plugin integrated with Kong API Gateway to cache GraphQL request routing through Kong API Gateway using Redis.",
+    "/imgs/kong-logo.png",
+    "https://github.com/BuiChiTrung/kong-custom-plugin"
+  ),
+  new Project(
+    "4Room",
+    "A forum for educational purposes. Users can enhance their productivity with features such as video streaming and a Pomodoro timer.",
+    "/imgs/4room-logo.png",
+    "https://github.com/BuiChiTrung/4Room-FE"
+  ),
+  new Project(
+    "Xiangqi-VR",
+    "A Unity-based Chinese chess game with 3D graphics, designed for VR headset gameplay or mouse controller.",
+    "/imgs/xiangqi-logo.png",
+    "https://github.com/UET-CacVDHD"
+  ),
+];
+
+export default function Projects() {
+  return (
+    <section id="projects">
+      <Heading subTitle="Have A Look At My Recent" title="Projects" />
+      <div id="project-cards">
+        {myProjects.map((project, index) => (
+          <ProjectCard key={index} proj={project} />
+        ))}
+      </div>
+    </section>
+  );
+}
