@@ -9,6 +9,7 @@ import {
 export default function NavbarWrapper() {
   return (
     <Navbar
+      id="navbar"
       classNames={{
         item: [
           "flex",
@@ -25,7 +26,7 @@ export default function NavbarWrapper() {
           "data-[active=true]:after:bg-primary",
         ],
       }}
-      maxWidth="xl"
+      maxWidth="2xl"
       isBordered
     >
       <NavbarBrand>

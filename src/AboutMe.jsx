@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <section id="about-me">
       <Heading subTitle="Get To Know More" title="About Me" />
-      <div id="about-me-content">
+      <div id="about-me-content" className="columns-1">
         <div id="about-me-img">
           <img src={"/imgs/about-me.jpg"} alt="Trung Bui" />
         </div>

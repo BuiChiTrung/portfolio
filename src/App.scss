@@ -2,6 +2,50 @@ $main-color1: white;
 $main-color2: black;
 $main-color3: #ff7f50;
 
+/* Default styles for all screen sizes */
+
+/* Styles for 27-inch monitors and larger */
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* Styles for 24-inch monitors */
+@media screen and (min-width: 1920px) and (max-width: 2559px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Styles for 16-inch laptops */
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+/* Styles for 13-inch laptops */
+@media screen and (min-width: 1366px) and (max-width: 1599px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/* Styles for iPads */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+/* Styles for iPhones */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 5px;
+  }
+}
+
 html {
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
@@ -21,17 +65,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.nav-brand {
-  font-family: "Briem Hand", cursive;
-  font-size: 28px !important;
-  font-weight: bold;
-  color: $main-color3;
-}
-
-.nav-link {
-  font-size: 22px !important;
-}
-
 .bg-warning {
   background-color: $main-color3 !important;
 }
@@ -44,8 +77,22 @@ body {
   color: $main-color3 !important;
 }
 
+#navbar {
+  padding: 1rem;
+  .nav-brand {
+    font-family: "Briem Hand", cursive;
+    font-size: 2.8rem !important;
+    font-weight: bold;
+    color: $main-color3;
+  }
+
+  .nav-link {
+    font-size: 2.2rem !important;
+  }
+}
+
 #front {
-  font-size: 30px;
+  font-size: 3rem;
   height: 100vh;
   background-color: $main-color1;
   display: flex;
@@ -61,41 +108,41 @@ body {
   );
 }
 
-#front-img {
-  width: 50%;
-  height: 50%;
-}
-
 #front-text-buttons {
   text-align: left;
   width: 50%;
   #front-text {
+    width: 100vw;
     .hello-text {
-      font-size: 60px;
+      font-size: 6rem;
       font-weight: bold;
       font-family: "Montserrat", sans-serif;
 
       color: $main-color3;
     }
     .title-text {
-      font-size: 40px;
+      font-size: 4rem;
       .title,
       .cursor {
         font-family: "Jersey 25", sans-serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 50px;
+        font-size: 5rem;
       }
     }
   }
 
   #front-buttons {
     .btn {
-      margin-right: 20px;
+      margin-right: 2rem;
+      margin-top: 4rem;
       font-weight: 500;
+      padding: 2rem !important;
+      font-size: 1.5rem;
     }
     .btn > a {
       color: $main-color3;
+      font-size: 1.5rem;
     }
   }
 }
@@ -109,17 +156,16 @@ iframe {
 
 #heading {
   #heading-sub-title {
-    font-size: 22px;
+    font-size: 2.2rem;
     font-style: italic;
   }
   #heading-title {
-    font-size: 35px;
+    font-size: 3.5rem;
     font-weight: 500;
   }
 }
 
 #about-me {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,7 +220,7 @@ iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 5rem;
 
   #heading {
     color: $main-color1;
@@ -208,7 +254,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 70px;
+  gap: 7rem;
 
   #heading {
     color: $main-color3;
@@ -218,14 +264,14 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 3rem;
 
-    font-size: 30px;
+    font-size: 3rem;
     width: fit-content;
-    box-shadow: 10px 10px 30px rgb(202, 198, 198);
+    box-shadow: 1rem 1rem 3rem rgb(202, 198, 198);
     border: 2px solid $main-color2;
-    border-radius: 25px;
-    padding: 10px 50px;
+    border-radius: 2.5rem;
+    padding: 1rem 5rem;
   }
 
   #email:hover {
@@ -235,9 +281,9 @@ iframe {
 
   #social-media {
     a {
-      font-size: 70px;
+      font-size: 7rem;
       color: $main-color3;
-      margin: 0 20px;
+      margin: 0 2rem;
     }
   }
 
@@ -247,15 +293,15 @@ iframe {
     justify-content: space-between;
     align-items: center;
     bottom: 0;
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
     background-color: $main-color3;
     width: 100%;
     color: $main-color1;
     text-align: right;
 
     #footer-random {
-      font-size: 5px;
+      font-size: 0.5rem;
       text-align: left;
     }
   }

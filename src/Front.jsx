@@ -17,7 +17,7 @@ export default function Front() {
     <section id="front">
       <div id="front-text-buttons">
         <FrontText />
-        <br />
+
         <div id="front-buttons">
           <Button
             radius="full"

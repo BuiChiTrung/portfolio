@@ -10,7 +10,7 @@ import {
 
 export default function ProjectCard(props) {
   return (
-    <Card className="max-w-[20px] project-card" shadow="lg" isHoverable="true">
+    <Card className="project-card" shadow="lg" isHoverable="true">
       <CardHeader className="flex gap-3 projName">
         <Image
           alt="nextui logo"
