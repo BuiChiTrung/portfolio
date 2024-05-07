@@ -5,18 +5,18 @@ $main-color3: #ff7f50;
 /* Default styles for all screen sizes */
 
 /* Styles for 27-inch monitors and larger */
-@media screen and (min-width: 2560px) {
-  html {
-    font-size: 13px;
-  }
-}
+// @media screen and (min-width: 2560px) {
+//   html {
+//     font-size: 13px;
+//   }
+// }
 
-/* Styles for 24-inch monitors */
-@media screen and (min-width: 1920px) and (max-width: 2559px) {
-  html {
-    font-size: 12px;
-  }
-}
+// /* Styles for 24-inch monitors */
+// @media screen and (min-width: 1920px) and (max-width: 2559px) {
+//   html {
+//     font-size: 12px;
+//   }
+// }
 
 /* Styles for 16-inch laptops */
 @media screen and (min-width: 1600px) and (max-width: 1919px) {
@@ -26,23 +26,23 @@ $main-color3: #ff7f50;
 }
 
 /* Styles for 13-inch laptops */
-@media screen and (min-width: 1366px) and (max-width: 1599px) {
+@media screen and (min-width: 1066px) and (max-width: 1599px) {
   html {
     font-size: 10px;
   }
 }
 
-/* Styles for iPads */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  html {
-    font-size: 8px;
-  }
-}
+// /* Styles for iPads */
+// @media screen and (min-width: 768px) and (max-width: 1024px) {
+//   html {
+//     font-size: 8px;
+//   }
+// }
 
 /* Styles for iPhones */
 @media screen and (max-width: 767px) {
   html {
-    font-size: 5px;
+    font-size: 4.5px;
   }
 }
 
@@ -166,52 +166,34 @@ iframe {
 }
 
 #about-me {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
   #heading {
     color: $main-color3;
   }
 
-  #about-me-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
-    padding: 6% 10%;
+  #about-me-img {
+    margin: auto;
+    img {
+      width: 100%;
+      border-radius: 15%;
+      border: 5px solid $main-color3;
+    }
+  }
 
-    #about-me-img {
-      width: 30%;
-      img {
-        border-radius: 15%;
-        border: 5px solid $main-color3;
-      }
+  .card {
+    border: 2px solid $main-color3;
+    i {
+      color: $main-color3 !important;
     }
 
-    #about-me-text {
-      width: 55%;
+    div {
+      text-align: center !important;
+      justify-content: center;
     }
-    #about-me-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .card {
-        width: 44%;
-        border: 2px solid $main-color3;
-        i {
-          color: $main-color3 !important;
-        }
+  }
 
-        div {
-          text-align: center !important;
-          justify-content: center;
-        }
-      }
-    }
-    #about-me-intro {
-      margin-top: 5%;
-      text-align: justify;
-    }
+  #about-me-intro {
+    text-align: justify;
   }
 }
 

@@ -32,7 +32,7 @@ export default function NavbarWrapper() {
       <NavbarBrand>
         <p className="font-bold text-inherit nav-brand">TRUNG BUI</p>
       </NavbarBrand>
-      <NavbarContent className="lg:flex gap-4" justify="center">
+      <NavbarContent className="lg:flex gap-8" justify="center">
         <NavbarItem isActive>
           <Link color="foreground" href="#about-me" className="nav-link">
             AboutMe
