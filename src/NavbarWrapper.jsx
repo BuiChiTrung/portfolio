@@ -5,8 +5,13 @@ import {
   NavbarItem,
   Link,
 } from "@nextui-org/react";
+import { useState } from "react";
 
 export default function NavbarWrapper() {
+  const [aboutMeActive, setAboutMeActive] = useState(false);
+  const [projectsActive, setProjectsActive] = useState(false);
+  const [contactActive, setContactActive] = useState(false);
+
   return (
     <Navbar
       id="navbar"
@@ -33,18 +38,48 @@ export default function NavbarWrapper() {
         <p className="font-bold text-inherit nav-brand">TRUNG BUI</p>
       </NavbarBrand>
       <NavbarContent className="lg:flex gap-8" justify="center">
-        <NavbarItem isActive>
-          <Link color="foreground" href="#about-me" className="nav-link">
+        <NavbarItem isActive={aboutMeActive}>
+          <Link
+            color="foreground"
+            href="#about-me"
+            className="nav-link"
+            onClick={() => {
+              setAboutMeActive(true);
+              setContactActive(false);
+              setProjectsActive(false);
+              console.log("about me");
+            }}
+          >
             AboutMe
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#projects" className="nav-link">
+        <NavbarItem isActive={projectsActive}>
+          <Link
+            color="foreground"
+            href="#projects"
+            className="nav-link"
+            onClick={() => {
+              setAboutMeActive(false);
+              setProjectsActive(true);
+              setContactActive(false);
+              console.log("about me");
+            }}
+          >
             Projects
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#contact" className="nav-link">
+        <NavbarItem isActive={contactActive}>
+          <Link
+            color="foreground"
+            href="#contact"
+            className="nav-link"
+            onClick={() => {
+              setAboutMeActive(false);
+              setProjectsActive(false);
+              setContactActive(true);
+              console.log("about me");
+            }}
+          >
             Contact
           </Link>
         </NavbarItem>

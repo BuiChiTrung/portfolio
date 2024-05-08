@@ -5,30 +5,30 @@ $main-color3: #ff7f50;
 /* Default styles for all screen sizes */
 
 /* Styles for 27-inch monitors and larger */
-// @media screen and (min-width: 2560px) {
-//   html {
-//     font-size: 13px;
-//   }
-// }
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 13px;
+  }
+}
 
-// /* Styles for 24-inch monitors */
-// @media screen and (min-width: 1920px) and (max-width: 2559px) {
-//   html {
-//     font-size: 12px;
-//   }
-// }
+/* Styles for 24-inch monitors */
+@media screen and (min-width: 1920px) and (max-width: 2559px) {
+  html {
+    font-size: 12px;
+  }
+}
 
 /* Styles for 16-inch laptops */
 @media screen and (min-width: 1600px) and (max-width: 1919px) {
   html {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 
 /* Styles for 13-inch laptops */
 @media screen and (min-width: 1066px) and (max-width: 1599px) {
   html {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 
@@ -111,7 +111,6 @@ body {
   text-align: left;
   width: 50%;
   #front-text {
-    width: 100vw;
     .hello-text {
       font-size: 6rem;
       font-weight: bold;
@@ -209,7 +208,7 @@ iframe {
     }
   }
   .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 }
 
