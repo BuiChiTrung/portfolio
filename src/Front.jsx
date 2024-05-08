@@ -28,7 +28,7 @@ export default function Front() {
             View my CV
           </Button>
           <Modal
-            size="5xl"
+            size="full"
             isOpen={isOpen}
             onOpenChange={onOpenChange}
             id="cv-modal"
@@ -46,7 +46,11 @@ export default function Front() {
                     ></iframe>
                   </ModalBody>
                   <ModalFooter>
-                    <Button color="warning" onPress={onClose}>
+                    <Button
+                      color="warning"
+                      onPress={onClose}
+                      className="text-4xl w-56 h-20"
+                    >
                       Close
                     </Button>
                   </ModalFooter>

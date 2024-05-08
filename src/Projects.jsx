@@ -33,13 +33,14 @@ const myProjects = [
 
 export default function Projects() {
   return (
-    <section id="projects">
+    <section
+      id="projects"
+      className="px-10 grid gap-8 grid-rows-12 lg:grid-cols-3 lg:grid-rows-8 lg:px-20"
+    >
       <Heading subTitle="Have A Look At My Recent" title="Projects" />
-      <div id="project-cards">
-        {myProjects.map((project, index) => (
-          <ProjectCard key={index} proj={project} />
-        ))}
-      </div>
+      {myProjects.map((project, index) => (
+        <ProjectCard key={index} proj={project} />
+      ))}
     </section>
   );
 }

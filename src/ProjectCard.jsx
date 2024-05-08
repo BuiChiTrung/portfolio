@@ -9,36 +9,36 @@ import {
 } from "@nextui-org/react";
 
 export default function ProjectCard(props) {
+  const rowSpan = 2;
+  const startRowID = props.key * rowSpan + 1;
+  const classStr = `project-card text-5xl mt-20 col-span-full row-start-${startRowID} row-span-${rowSpan} lg:col-span-1 lg:text-3xl md:h-80 lg:text-3xl`;
   return (
-    <Card className="project-card" shadow="lg" isHoverable="true">
-      <CardHeader className="flex gap-3 projName">
+    <Card shadow="lg" isHoverable="true" className={classStr}>
+      <CardHeader className="projName lg:flex lg:justify-center">
         <Image
           alt="nextui logo"
-          height={40}
+          // height={40}
           radius="sm"
           src={props.proj.logoPath}
           width={40}
+          className="w-16 lg:w-18"
         />
-        <div className="flex flex-col">
-          <p className="text-md">{props.proj.name}</p>
-        </div>
+        <p className="text-5xl mx-4 lg:text-4xl">{props.proj.name}</p>
       </CardHeader>
       <Divider />
       <CardBody>
-        <p className="projDesc">{props.proj.desc}</p>
+        <p className="projDesc text-5xl lg:text-3xl">{props.proj.desc}</p>
       </CardBody>
       <Divider />
-      <CardFooter className="projDemo">
-        <Link isExternal showAnchorIcon href={props.proj.srcCodeLink}>
-          Source code
-        </Link>
-        {/* <Link
+      <CardFooter className="projDemo flex justify-center">
+        <Link
           isExternal
           showAnchorIcon
-          href="https://github.com/nextui-org/nextui"
+          href={props.proj.srcCodeLink}
+          className="text-3xl"
         >
-          Demo
-        </Link> */}
+          Source code
+        </Link>
       </CardFooter>
     </Card>
   );
