@@ -47,10 +47,11 @@ $main-color3: #ff7f50;
 }
 
 html {
-  scroll-snap-type: mandatory;
+  // scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  // scroll-snap-stop: always;
 }
 
 .App {
@@ -168,6 +169,7 @@ iframe {
 }
 
 #about-me {
+  scroll-snap-stop: always;
   display: grid;
   #heading {
     color: $main-color3;
@@ -200,6 +202,7 @@ iframe {
 }
 
 #projects {
+  scroll-snap-stop: always;
   background-color: $main-color3;
 
   #heading {
@@ -217,6 +220,7 @@ iframe {
 }
 
 #contact {
+  scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
   justify-content: center;
