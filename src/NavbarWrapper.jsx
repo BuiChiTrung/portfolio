@@ -5,12 +5,22 @@ import {
   NavbarItem,
   Link,
 } from "@nextui-org/react";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-export default function NavbarWrapper() {
-  const [aboutMeActive, setAboutMeActive] = useState(false);
-  const [projectsActive, setProjectsActive] = useState(false);
-  const [contactActive, setContactActive] = useState(false);
+export default function NavbarWrapper(props) {
+  const [pagesIsActive, setPagesIsActive] = useState([false, false, false]);
+
+  const changeActivePage = useCallback(
+    (page) => {
+      let newPagesIsActive = pagesIsActive.map((_, index) => index === page);
+      setPagesIsActive(newPagesIsActive);
+    },
+    [pagesIsActive]
+  );
+
+  useEffect(() => {
+    changeActivePage(props.pageOffset);
+  }, [props.pageOffset, changeActivePage]);
 
   return (
     <Navbar
@@ -35,51 +45,23 @@ export default function NavbarWrapper() {
       isBordered
     >
       <NavbarBrand>
-        <p className="font-bold text-inherit nav-brand">TRUNG BUI</p>
+        <Link color="foreground" href="#" className="nav-brand">
+          TRUNG BUI
+        </Link>
       </NavbarBrand>
       <NavbarContent className="lg:flex gap-8" justify="center">
-        <NavbarItem isActive={aboutMeActive}>
-          <Link
-            color="foreground"
-            href="#about-me"
-            className="nav-link"
-            onClick={() => {
-              setAboutMeActive(true);
-              setContactActive(false);
-              setProjectsActive(false);
-              console.log("about me");
-            }}
-          >
+        <NavbarItem isActive={pagesIsActive[0]}>
+          <Link color="foreground" href="#about-me" className="nav-link">
             AboutMe
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={projectsActive}>
-          <Link
-            color="foreground"
-            href="#projects"
-            className="nav-link"
-            onClick={() => {
-              setAboutMeActive(false);
-              setProjectsActive(true);
-              setContactActive(false);
-              console.log("about me");
-            }}
-          >
+        <NavbarItem isActive={pagesIsActive[1]}>
+          <Link color="foreground" href="#projects" className="nav-link">
             Projects
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={contactActive}>
-          <Link
-            color="foreground"
-            href="#contact"
-            className="nav-link"
-            onClick={() => {
-              setAboutMeActive(false);
-              setProjectsActive(false);
-              setContactActive(true);
-              console.log("about me");
-            }}
-          >
+        <NavbarItem isActive={pagesIsActive[2]}>
+          <Link color="foreground" href="#contact" className="nav-link">
             Contact
           </Link>
         </NavbarItem>

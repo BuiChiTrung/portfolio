@@ -71,6 +71,7 @@ export default function Front() {
             </Link>
           </Button>
         </div>
+        {/* <a href="#about-me">Click Me to Smooth Scroll to Section 2 Below</a> */}
       </div>
     </section>
   );
