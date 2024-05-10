@@ -40,7 +40,7 @@ export default function Front() {
                   <ModalBody>
                     <iframe
                       class="pdf"
-                      src="/Bui_Chi_Trung_CV.pdf"
+                      src="./Bui_Chi_Trung_CV.pdf"
                       id="cv-pdf"
                       title="Bui Chi Trung CV"
                     ></iframe>

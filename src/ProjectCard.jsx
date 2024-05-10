@@ -12,7 +12,6 @@ export default function ProjectCard(props) {
   const rowSpan = 2;
   const smStartRowID = props.proj.id * rowSpan + 3;
   const classStr = `project-card text-5xl mt-20 col-span-full row-start-${smStartRowID} row-span-${rowSpan} md:h-96 lg:row-start-4 lg:mx-16 lg:col-span-1 lg:text-3xl lg:text-3xl`;
-  console.log(smStartRowID);
   return (
     <Card shadow="lg" isHoverable="true" className={classStr}>
       <CardHeader className="projName lg:flex lg:justify-center">

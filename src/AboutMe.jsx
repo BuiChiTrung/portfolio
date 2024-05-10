@@ -12,7 +12,7 @@ export default function AboutMe() {
         id="about-me-img"
         className="col-span-full w-2/3 row-start-3 lg:w-full lg:col-start-2 lg:col-span-3 lg:row-start-4"
       >
-        <img src={"/imgs/about-me.jpg"} alt="Trung Bui" className="w-1/3" />
+        <img src={"./imgs/about-me.jpg"} alt="Trung Bui" className="w-1/3" />
       </div>
       <Card
         shadow="lg"

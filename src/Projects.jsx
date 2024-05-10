@@ -16,21 +16,21 @@ const myProjects = [
     0,
     "Kong Custom Plugin",
     "A custom plugin integrated with Kong API Gateway to cache GraphQL request routing through Kong API Gateway using Redis.",
-    "/imgs/kong-logo.png",
+    "./imgs/kong-logo.png",
     "https://github.com/BuiChiTrung/kong-custom-plugin"
   ),
   new Project(
     1,
     "4Room",
     "A forum for educational purposes. Users can enhance their productivity with features such as video streaming and a Pomodoro timer.",
-    "/imgs/4room-logo.png",
+    "./imgs/4room-logo.png",
     "https://github.com/BuiChiTrung/4Room-FE"
   ),
   new Project(
     2,
     "Xiangqi-VR",
     "A Unity-based Chinese chess game with 3D graphics, designed for VR headset gameplay or mouse controller.",
-    "/imgs/xiangqi-logo.png",
+    "./imgs/xiangqi-logo.png",
     "https://github.com/UET-CacVDHD"
   ),
 ];
