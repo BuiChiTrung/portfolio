@@ -29,7 +29,7 @@ const myProjects = [
   new Project(
     2,
     "Xiangqi-VR",
-    "A Unity-based Chinese chess game with 3D graphics, designed for VR headset gameplay or mouse controller.",
+    "A Unity-based Chinese chess game with 3D graphics, designed for VR headset gameplay or mouse/keyboard controller.",
     "./imgs/xiangqi-logo.png",
     "https://github.com/UET-CacVDHD"
   ),
