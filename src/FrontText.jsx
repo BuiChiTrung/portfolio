@@ -12,10 +12,10 @@ export default function FrontText() {
     if (displayJobIdx >= titles[index].length + 5) {
       setEp(-1);
     } else if (displayJobIdx === 0) {
-      setEp(1);
       setIndex((prevIndex) => (prevIndex + 1) % titles.length);
+      setEp(1);
     }
-  }, [displayJobIdx, index]);
+  }, [displayJobIdx]);
 
   useEffect(() => {
     const interval = setInterval(() => {
