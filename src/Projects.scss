@@ -1,0 +1,19 @@
+@import "variables";
+
+#projects {
+  scroll-snap-stop: always;
+  background-color: $main-color3;
+
+  #heading {
+    color: $main-color1;
+  }
+
+  .project-card {
+    .projDesc {
+      text-align: justify !important;
+    }
+  }
+  .project-card:hover {
+    transform: scale(1.03);
+  }
+}

@@ -1,5 +1,6 @@
 import Heading from "./Heading";
 import { Link } from "@nextui-org/react";
+import "./Contact.scss";
 
 class SocialMedia {
   constructor(link, fontAwesomeClass) {

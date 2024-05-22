@@ -1,0 +1,15 @@
+@import "variables";
+
+#navbar {
+  padding: 1rem;
+  .nav-brand {
+    font-family: "Briem Hand", cursive;
+    font-size: 2.8rem !important;
+    font-weight: bold;
+    color: $main-color3;
+  }
+
+  .nav-link {
+    font-size: 2.2rem !important;
+  }
+}

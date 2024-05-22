@@ -1,5 +1,6 @@
 import Heading from "./Heading";
 import ProjectCard from "./ProjectCard";
+import "./Projects.scss";
 
 class Project {
   constructor(id, name, desc, logoPath, srcCodeLink) {

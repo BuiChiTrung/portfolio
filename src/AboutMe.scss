@@ -1,0 +1,34 @@
+@import "variables";
+
+#about-me {
+  scroll-snap-stop: always;
+  display: grid;
+  #heading {
+    color: $main-color3;
+  }
+
+  #about-me-img {
+    margin: auto;
+    img {
+      width: 100%;
+      border-radius: 15%;
+      border: 5px solid $main-color3;
+    }
+  }
+
+  .card {
+    border: 2px solid $main-color3;
+    i {
+      color: $main-color3 !important;
+    }
+
+    div {
+      text-align: center !important;
+      justify-content: center;
+    }
+  }
+
+  #about-me-intro {
+    text-align: justify;
+  }
+}

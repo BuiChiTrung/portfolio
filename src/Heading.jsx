@@ -1,3 +1,5 @@
+import "./Heading.scss";
+
 export default function Heading(props) {
   return (
     <div id="heading" className="col-span-full row-start-2">

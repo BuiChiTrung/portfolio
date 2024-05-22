@@ -1,0 +1,60 @@
+@import "variables";
+
+#contact {
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+
+  #heading {
+    color: $main-color3;
+  }
+
+  #email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    font-size: 3rem;
+    width: fit-content;
+    box-shadow: 1rem 1rem 3rem rgb(202, 198, 198);
+    border: 2px solid $main-color2;
+    border-radius: 2.5rem;
+    padding: 1rem 5rem;
+  }
+
+  #email:hover {
+    border-color: transparent;
+    border: 2px solid $main-color3;
+  }
+
+  #social-media {
+    a {
+      font-size: 7rem;
+      color: $main-color3;
+      margin: 0 2rem;
+    }
+  }
+
+  #footer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    background-color: $main-color3;
+    width: 100%;
+    color: $main-color1;
+    text-align: right;
+
+    #footer-random {
+      font-size: 0.5rem;
+      text-align: left;
+    }
+  }
+}

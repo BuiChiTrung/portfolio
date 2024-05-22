@@ -6,13 +6,19 @@ import {
   Link,
 } from "@nextui-org/react";
 import { useCallback, useEffect, useState } from "react";
+import "./NavbarWrapper.scss";
 
 export default function NavbarWrapper(props) {
-  const [pagesIsActive, setPagesIsActive] = useState([false, false, false]);
+  const [pagesIsActive, setPagesIsActive] = useState([
+    false, // home page
+    false, // about me
+    false, // projects
+    false, // contact
+  ]);
 
   const changeActivePage = useCallback(
     (page) => {
-      if (page < 0 || pagesIsActive[page]) return;
+      if (pagesIsActive[page]) return;
       let newPagesIsActive = pagesIsActive.map((_, index) => index === page);
       setPagesIsActive(newPagesIsActive);
     },
@@ -51,17 +57,17 @@ export default function NavbarWrapper(props) {
         </Link>
       </NavbarBrand>
       <NavbarContent className="lg:flex gap-8" justify="center">
-        <NavbarItem isActive={pagesIsActive[0]}>
+        <NavbarItem isActive={pagesIsActive[1]}>
           <Link color="foreground" href="#about-me" className="nav-link">
             AboutMe
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={pagesIsActive[1]}>
+        <NavbarItem isActive={pagesIsActive[2]}>
           <Link color="foreground" href="#projects" className="nav-link">
             Projects
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={pagesIsActive[2]}>
+        <NavbarItem isActive={pagesIsActive[3]}>
           <Link color="foreground" href="#contact" className="nav-link">
             Contact
           </Link>

@@ -9,6 +9,7 @@ import {
 } from "@nextui-org/react";
 
 import FrontText from "./FrontText";
+import "./Front.scss";
 
 export default function Front() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();

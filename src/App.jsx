@@ -22,7 +22,7 @@ export default function App() {
   return (
     <NextUIProvider>
       <div className="App">
-        <NavbarWrapper pageOffset={pageOffset - 1} />
+        <NavbarWrapper pageOffset={pageOffset} />
         <Front />
         <AboutMe />
         <Projects />

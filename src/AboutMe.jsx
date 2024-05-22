@@ -1,5 +1,6 @@
 import Heading from "./Heading";
 import { Card, CardHeader, CardBody, Divider } from "@nextui-org/react";
+import "./AboutMe.scss";
 
 export default function AboutMe() {
   return (
