@@ -12,6 +12,7 @@ export default function NavbarWrapper(props) {
 
   const changeActivePage = useCallback(
     (page) => {
+      if (page < 0 || pagesIsActive[page]) return;
       let newPagesIsActive = pagesIsActive.map((_, index) => index === page);
       setPagesIsActive(newPagesIsActive);
     },

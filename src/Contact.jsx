@@ -33,9 +33,9 @@ export default function Contact() {
       </div>
 
       <div id="social-media">
-        {socialMediaList.map((socialMedia) => {
+        {socialMediaList.map((socialMedia, index) => {
           return (
-            <Link isExternal href={socialMedia.link}>
+            <Link isExternal key={index} href={socialMedia.link}>
               <i class={socialMedia.fontAwesomeClass}></i>
             </Link>
           );
