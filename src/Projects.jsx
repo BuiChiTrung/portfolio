@@ -22,10 +22,10 @@ const myProjects = [
   ),
   new Project(
     1,
-    "4Room",
-    "A forum for educational purposes. Users can enhance their productivity with features such as video streaming and a Pomodoro timer.",
+    "Clox",
+    "A new dynamic programming language implemented using C++ which supports variables, statements, branching, loop, etc",
     "./imgs/4room-logo.png",
-    "https://github.com/BuiChiTrung/4Room-FE"
+    "https://github.com/BuiChiTrung/clox"
   ),
   new Project(
     2,
