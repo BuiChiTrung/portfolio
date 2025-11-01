@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const titles = ["Full-Stack Engineer", "NPU/GPU Engineer"];
+const titles = ["Full-Stack Engineer", "Silicon Engineer"];
 
 export default function FrontText() {
   const [index, setIndex] = useState(0);
